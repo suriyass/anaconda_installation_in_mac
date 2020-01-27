@@ -1,0 +1,12 @@
+cd ~
+curl https://repo.continuum.io/archive/Anaconda3-5.1.0-MacOSX-x86_64.sh -o anaconda3.sh
+bash anaconda3.sh -b -p ~/anaconda3
+rm anaconda3.sh
+echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bash_profile # Refresh basically
+source .bash_profile
+conda update conda
+
+After installating if it shows zsh:conda command not found , change the shell from zsh to bash by the following command
+chsh -s /bin/bash 
+
+after this try installing from step1
